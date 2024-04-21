@@ -2,7 +2,9 @@ const imageFile = document.getElementById('file')
 const rightImage = document.getElementById('rightImage')
 const magicButton = document.getElementById('magicButton')
 const loader = document.getElementById('loader')
-
+const model = document.getElementById('model')
+const closeBtn = document.getElementById('closeBtn')
+const resultImage = document.getElementById('resultImage')
 let apiUrl = `https://python-api.techsimplus.com/api/amazon-service/`
 let imageBase64 = null
 
@@ -54,6 +56,11 @@ magicButton.addEventListener('click', async() => {
     
     rightImage.src = resData.data.image
     loader.style.display ="none"
+    resultImage.src = resData.data.image
+    model.style.display="flex"
 })
 
 
+closeBtn.addEventListener('click',()=>{
+    model.style.display="none"
+})
