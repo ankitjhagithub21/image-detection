@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Detection</title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+   <div class="overlay" id="loader">
+    <span class="loader"></span>
+   </div>
+    <div class="container">
+        <div class="left">
+            <h1>AI Web App</h1>
+            <h1>power fun with web app</h1>
+            <p>Let's Play together</p>
+            <div class="choose-image">
+                <input type="file" id="file" hidden>
+                <label for="file" id="imageLabel">Choose your image</label>
+            </div>
+         
+            <div class="service-container">
+                <div>
+                    <input type="radio" name="service" id="object-detection" value="ObjectDetection">
+                    <label for="object-detection">Object Detection</label>
+                </div>
+                <div>
+                    <input type="radio" name="service" id="face-detection" value="FaceDetection">
+                    <label for="face-detection">Face Detection</label>
+                </div>
+                <div>
+                    <input type="radio" name="service" id="celebrity-detection" value="CelebrityDetection">
+                    <label for="celebrity-detection">Celebrity Detection</label>
+                </div>
+            </div>
+            <button id="magicButton">See the magic</button>
+        </div>
+        <div class="right">
+            <img src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8fDB8fHww" alt="" id="rightImage" width="100">
+        </div>
+    </div>
+    <div id="model">
+       
+        <img src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8fDB8fHww" alt="" id="resultImage" width="300">
+    </div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>

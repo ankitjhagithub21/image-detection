@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 44, 9, 0.6362920168067228) 35%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 600px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    gap: 20px;
+    align-items: center;
+}
+
+.left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    gap: 5px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.right {
+    width: 50%;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 5px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.choose-image {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#imageLabel {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border-radius: 30px;
+    font-size: 15px;
+    border: 1px solid black;
+
+}
+
+#magicButton {
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.service-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #FFF;
+    border-bottom-color: rgb(87, 5, 87);
+    border-radius: 50%;
+
+
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#model{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:600px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+}
